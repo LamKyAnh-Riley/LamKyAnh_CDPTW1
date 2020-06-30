@@ -1,0 +1,82 @@
+$color_text: #1f365c;
+$font-weight: 700;
+$font-family: normal 15px / 23px "Open Sans",'Helvetica','Arial','Verdana','sans-serif';
+@mixin re-content($number) {
+    -webkit-line-clamp: $number;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+}
+
+
+%button-slider {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.type-1730 {
+    position: relative;
+    a {
+        color: $color_text;
+        text-decoration: none !important;
+    }
+      .consultant{
+        font-weight: $font-weight;
+        margin: 0px 0px 15px;
+        color: $color_text;
+        gap: normal;
+        line-height: 22px;
+        text-align: center;
+        }
+
+    .title-content {
+        text-align: center;
+        .ult_btn10_span {
+            font-weight: $font-weight;
+            color: $color_text !important;
+            display:inline;
+            font-size: 17px;
+            gap:normal;
+            line-height:30px;
+            text-transform: uppercase;
+            a:hover{
+              color: #F4A215;
+            }
+        }
+
+        .entry-description {
+          text-align: center;
+          color:hsl(215, 11%, 59%);
+          font-size:15px;
+          gap:normal;
+          line-height:23px;
+        }
+    }
+    //Arrows
+    .swiper-button-prev {
+      width: 20px;
+      height: 100px;
+      font-size: 15px;
+      line-height: 23px;
+      color: #fff;
+      background: #F4A215;
+      margin-left: 40px;
+      position: absolute;
+      &::after {
+        @extend %button-slider;
+      }
+    }
+    .swiper-button-next {
+      width: 20px;
+      height: 100px;
+      font-size: 15px;
+      line-height: 23px;
+      color: #fff;
+      background: #F4A215;
+      margin-right: 40px;
+      position: absolute;
+      &::after {
+        @extend %button-slider;
+      }
+    }
+  }
